@@ -1,0 +1,137 @@
+/* Animation styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+section.animated {
+    opacity: 1;
+}
+
+.hero.animated h1 {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero.animated h2 {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero.animated p {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero.animated .hero-buttons {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.about.animated .about-text {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.about.animated .about-skills {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+.education.animated .timeline-item:nth-child(odd) .timeline-content {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.education.animated .timeline-item:nth-child(even) .timeline-content {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.projects.animated .project-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.projects.animated .project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.projects.animated .project-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.achievements.animated .achievement-item {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.achievements.animated .achievement-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.achievements.animated .achievement-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.achievements.animated .achievement-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.contact.animated .contact-info {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.contact.animated .contact-form {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+/* Form success/error message styles */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
